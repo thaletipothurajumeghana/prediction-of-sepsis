@@ -1,0 +1,44 @@
+{
+  "best_model_name": "Random Forest",
+  "feature_names": [
+    "HR",
+    "O2Sat",
+    "Temp",
+    "SBP",
+    "MAP",
+    "DBP",
+    "Resp",
+    "Age",
+    "Gender",
+    "Unit1",
+    "Unit2",
+    "HospAdmTime",
+    "ICULOS"
+  ],
+  "metrics": {
+    "Logistic Regression": {
+      "roc_auc": 0.7102,
+      "f1": 0.0757,
+      "accuracy": 0.744,
+      "avg_precision": 0.0637
+    },
+    "Random Forest": {
+      "roc_auc": 0.798,
+      "f1": 0.1724,
+      "accuracy": 0.9298,
+      "avg_precision": 0.1014
+    },
+    "XGBoost": {
+      "roc_auc": 0.7704,
+      "f1": 0.0733,
+      "accuracy": 0.6776,
+      "avg_precision": 0.0884
+    },
+    "Ensemble (Soft Vote)": {
+      "roc_auc": 0.7837,
+      "f1": 0.1151,
+      "accuracy": 0.8478,
+      "avg_precision": 0.1002
+    }
+  }
+}
