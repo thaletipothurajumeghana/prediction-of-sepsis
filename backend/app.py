@@ -232,9 +232,12 @@ def create_app():
 
     return app
 
+    
+    
+app = create_app()
 
 if __name__ == '__main__':
-    app = create_app()
+    
     port = int(os.environ.get('PORT', 5000))
     print(f"\n{'='*50}\n  SepsisAI — http://localhost:{port}\n{'='*50}\n")
     app.run(debug=True, host='0.0.0.0', port=port, use_reloader=False)
