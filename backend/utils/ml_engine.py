@@ -85,7 +85,7 @@ def _compute_risk_components(values: dict, overall_prob: float) -> list:
 
     def score(keys, hi_bad=True):
         """Score 0–100 based on how many keys are abnormal."""
-        from utils.pdf_extractor import ALL_FEATURES
+        from backend.utils.pdf_extractor import ALL_FEATURES
         pts = []
         for k in keys:
             if k not in values or values[k] is None:

@@ -1,6 +1,6 @@
 """Health check route"""
 from flask import Blueprint, jsonify
-from utils.ml_engine import model_info
+from backend.utils.ml_engine import model_info
 
 health_bp = Blueprint('health', __name__)
 
