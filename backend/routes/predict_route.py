@@ -9,7 +9,7 @@ import json
 from flask import Blueprint, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 
-from backend.utils.pdf_extractor import extract_from_pdf, assess_completeness, get_abnormal_flags, ALL_FEATURES
+from utils.pdf_extractor import extract_from_pdf, assess_completeness, get_abnormal_flags, ALL_FEATURES
 from utils.ml_engine import predict
 
 predict_bp = Blueprint('predict', __name__)

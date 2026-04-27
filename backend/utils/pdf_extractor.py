@@ -1,7 +1,6 @@
 """
 PDF Extractor — parses blood report PDFs and extracts lab values
 """
-# -*- coding: utf-8 -*-
 
 import re
 import os

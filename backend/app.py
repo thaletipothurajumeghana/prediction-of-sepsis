@@ -211,9 +211,9 @@ def create_app():
 
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-    from backend.routes.predict_route import predict_bp
-    from backend.routes.report_route  import report_bp
-    from backend.routes.health_route  import health_bp
+    from routes.predict_route import predict_bp
+    from routes.report_route  import report_bp
+    from routes.health_route  import health_bp
 
     app.register_blueprint(predict_bp, url_prefix='/api')
     app.register_blueprint(report_bp,  url_prefix='/api')
@@ -232,12 +232,9 @@ def create_app():
 
     return app
 
-    
-    
-app = create_app()
 
 if __name__ == '__main__':
-    
+    app = create_app()
     port = int(os.environ.get('PORT', 5000))
     print(f"\n{'='*50}\n  SepsisAI — http://localhost:{port}\n{'='*50}\n")
     app.run(debug=True, host='0.0.0.0', port=port, use_reloader=False)
