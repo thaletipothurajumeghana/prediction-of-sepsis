@@ -211,9 +211,9 @@ def create_app():
 
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-    from routes.predict_route import predict_bp
-    from routes.report_route  import report_bp
-    from routes.health_route  import health_bp
+    from backend.routes.predict_route import predict_bp
+    from backend.routes.report_route import report_bp
+    from backend.routes.health_route import health_bp
 
     app.register_blueprint(predict_bp, url_prefix='/api')
     app.register_blueprint(report_bp,  url_prefix='/api')
